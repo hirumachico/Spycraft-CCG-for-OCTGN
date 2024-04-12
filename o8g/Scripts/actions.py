@@ -223,7 +223,7 @@ def discard(card, x = 0, y = 0):
       scrubResult = scrubMission(card)
       if scrubResult == 'ABORT': return
       elif scrubResult != 'NOTINCURRENTQUEUE':
-      if prepMission(shared.Missions.top()) == 'ABORT': return
+          if prepMission(shared.Missions.top()) == 'ABORT': return
       clearAttachLinks(card)
       card.moveTo(shared.piles['Mission Discard'])
       notify("{} discards {}.".format(me, card))
@@ -663,12 +663,12 @@ def replaceTargetedMissionWithSelectedMission(card, x = 0, y = 0):
     notify("Targeted mission is {} and its type is {} and highlight is {}.  New mission is {} and its type is {}.".format(targetedMission.name, targetedMission.Type, targetedMission.highlight, card.name, card.Type))
     if card.Type == 'Mission':
        if confirm("Do you wish to replace the targeted mission {} with mission {}?".format(targetedMission.name, card.name)):
-	   x,y = targetedMission.position
-	   if targetedMission.highlight != '': card.highlight = targetedMission.highlight
-	   if targetedMission.isFaceUp: FaceDown = False
-	   else: FaceDown = True
-	   clearAttachLinks(targetedMission)
-	   currentMissions = eval(currMissionsVar)
+           x,y = targetedMission.position
+       if targetedMission.highlight != '': card.highlight = targetedMission.highlight
+       if targetedMission.isFaceUp: FaceDown = False
+       else: FaceDown = True
+       clearAttachLinks(targetedMission)
+       currentMissions = eval(currMissionsVar)
        if targetedMission.orientation == Rot90: isRotated = True
        else: isRotated = False
        targetIndex = currentMissions.index(targetedMission._id)
@@ -692,8 +692,8 @@ def replaceTargetedMissionWithSelectedMission(card, x = 0, y = 0):
           setGlobalVariable('currentMissions', str(currentMissions))
        notify("Targeted mission {} replaced with mission {}".format(targetedMission.name, card.name))
     else:
-	   whisper(":::ERROR::: You can only replace the first mission in the queue with another mission card.")
-	   return 'ABORT'
+       whisper(":::ERROR::: You can only replace the first mission in the queue with another mission card.")
+       return 'ABORT'
     return 'OK'
 
 def customMarker(card,x=0,y=0):
@@ -704,6 +704,6 @@ def customMarker(card,x=0,y=0):
    #notify("{} is the marker label and {} is the quantity".format(marker, qty))
 
 def moveTopMissionCardToTableFacedown(group, x=0, y=0):
-	card = group.top()
-	card.moveToTable(300, -40, True)
-	card.orientation = Rot90
+    card = group.top()
+    card.moveToTable(300, -40, True)
+    card.orientation = Rot90

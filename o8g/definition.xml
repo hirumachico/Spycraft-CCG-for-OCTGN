@@ -23,6 +23,23 @@
       <script src="Scripts/generic.py" />
       <script src="Scripts/meta.py" />
    </scripts>  
+   <markers>
+	  <marker id="0183c0b8-6a6d-42c5-bedb-94bbc8ca5329" name="Exposed" src="Counters/Markers/0183c0b8-6a6d-42c5-bedb-94bbc8ca5329.png" />
+	  <marker id="0415bae0-0c88-4ec6-8169-aeb117318618" name="Baffled" src="Counters/Markers/0415bae0-0c88-4ec6-8169-aeb117318618.png" />
+	  <marker id="2f9409af-726e-4c57-b65d-1007250c9b81" name="Used Snoop" src="Counters/Markers/2f9409af-726e-4c57-b65d-1007250c9b81.png" />
+	  <marker id="96aab548-6e02-4509-b583-6cc318469465" name="Used Brief" src="Counters/Markers/96aab548-6e02-4509-b583-6cc318469465.png" />
+	  <marker id="72179c7a-9087-49f8-8a93-010b284cfa6e" name="Briefed" src="Counters/Markers/72179c7a-9087-49f8-8a93-010b284cfa6e.png" />
+	  <marker id="c964be10-521f-4cc0-a3a9-5c0def322110" name="Fresh Leader" src="Counters/Markers/c964be10-521f-4cc0-a3a9-5c0def322110.png" />
+	  <marker id="cdf63a20-808d-4789-b192-da69a870719c" name="Demoted" src="Counters/Markers/cdf63a20-808d-4789-b192-da69a870719c.png" />
+	  <marker id="fce69579-dbbf-428f-852f-86dbfdc97c67" name="Starting Player" src="Counters/Markers/fce69579-dbbf-428f-852f-86dbfdc97c67.png" />
+	  <marker id="69a2514e-9d49-4f8d-8408-dc069625e07c" name="Mission Action Taken" src="Counters/Markers/69a2514e-9d49-4f8d-8408-dc069625e07c.png" />
+	  <marker id="c3dcf14d-65ae-4356-b702-f4b8fda91313" name="Default Mission Action Taken" src="Counters/Markers/c3dcf14d-65ae-4356-b702-f4b8fda91313.png" />
+	  <marker id="05a5f34f-e4d2-4ee0-9906-b03f70b02a01" name="Text Action Taken" src="Counters/Markers/05a5f34f-e4d2-4ee0-9906-b03f70b02a01.png" />
+	  <marker id="6f7c5395-61f1-4810-a68b-f2e0eb6a7627" name="Minus One Counter" src="Counters/Markers/6f7c5395-61f1-4810-a68b-f2e0eb6a7627.png" />
+	  <marker id="23a3767d-d1c2-40c8-bfd6-d905d58ed151" name="Minus Two Counter" src="Counters/Markers/23a3767d-d1c2-40c8-bfd6-d905d58ed151.png" />
+	  <marker id="c33d870e-3bac-4768-8dcc-e68ae46c8d3f" name="Plus One Counter" src="Counters/Markers/c33d870e-3bac-4768-8dcc-e68ae46c8d3f.png" />
+	  <marker id="ecd2f0b0-4863-4eb8-a585-7c504a312393" name="Plus Two Counter" src="Counters/Markers/ecd2f0b0-4863-4eb8-a585-7c504a312393.png" />
+   </markers>
    <proxygen definitionsrc="Proxy/proxydef.xml">
    </proxygen>   
   <documents>
@@ -93,7 +110,7 @@
 <!--  <cardaction menu="Show Card Position" default="False" shortcut="Ctrl+Shift+X" execute="ShowPosC" /> -->
 	</table>
 	<player summary="{#Victory Points} VP/ {#Hand} Cards">
-		<hand name="Hand" visibility="me" ordered="False" width="63" height="88" icon="Groups/hand.jpg">
+		<group name="Hand" viewState="expanded" visibility="me" ordered="False" width="63" height="88" icon="Groups/hand.jpg">
 			<cardaction menu="Smart Play" default="True" shortcut="enter" execute="smartPlay" />
 			<cardaction menu="Play Action" default="False" execute="playAction" />
 			<cardaction menu="Play as Face-Down Agent" default="False" execute="playAgent" />
@@ -102,7 +119,7 @@
 			<cardaction menu="Inspect" default="False" shortcut="Ctrl+I" execute="inspectCard" />
 			<cardaction menu="Discard" default="False" shortcut="del" execute="discardFromHand" />
 			<groupaction menu="Discard at Random" default="False" execute="handRandomDiscard" />
-		</hand>
+		</group>
 		<group name="Deck" visibility="none" ordered="False" width="63" height="88" icon="Groups/deck.png" collapsed="False">
 			<groupaction menu="Draw" default="True" shortcut="Ctrl+D" execute="draw" />
 			<groupaction menu="Draw Many" default="False" shortcut="Ctrl+Shift+D" execute="drawMany" />
