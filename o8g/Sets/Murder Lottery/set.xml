@@ -17,7 +17,7 @@
 			<property name="Bravado" value="3" />
 			<property name="Faction" value="" />
 			<property name="Traits" value="" />
-			<property name="Rules" value="While this card is attached, this agent gains +2 to all skills.&#xD;&#xA;React Craft: Afer you win a non-solo op mission: Attach this card to one of your agents at the mission." />
+			<property name="Rules" value="While this card is attached, this agent gains +2 to all skills.&#xD;&#xA;React Craft: After you win a non-solo op mission: Attach this card to one of your agents at the mission." />
 			<property name="Victory Points" value="" />
 			<property name="Cover Level" value="" />
 		</card>
@@ -121,7 +121,7 @@
 			<property name="Level" value="" />
 			<property name="Bravado" value="1" />
 			<property name="Faction" value="" />
-			<property name="Traits" value="Solo-op - Public - Craft +2" />
+			<property name="Traits" value="Solo Op - Public - Craft +2" />
 			<property name="Rules" value="Charisma actions have -2 TN during this solo op.&#xD;&#xA;React Craft:After you assign a mission team to a mission, discard this card: Permanently increase or decrease both the objective and Victory Points of the missions by 2." />
 			<property name="Victory Points" value="" />
 			<property name="Cover Level" value="" />
@@ -151,7 +151,7 @@
 			<property name="Level" value="" />
 			<property name="Bravado" value="1" />
 			<property name="Faction" value="" />
-			<property name="Traits" value="" />
+			<property name="Traits" value="Faceman" />
 			<property name="Rules" value="Faceman only.&#xD;&#xA;React Charisma: After this agent declares an action: Change the skill used for action's TN to charisma. The action becomes a charisma action." />
 			<property name="Victory Points" value="" />
 			<property name="Cover Level" value="" />
@@ -181,7 +181,7 @@
 			<property name="Level" value="" />
 			<property name="Bravado" value="2" />
 			<property name="Faction" value="" />
-			<property name="Traits" value="" />
+			<property name="Traits" value="Wheelman" />
 			<property name="Rules" value="Wheelman only.&#xD;&#xA;Mission Transport X: If this is a fight mission, move target agent to headquarters. The TN is the target's transport.&#xD;&#xA;Mission Transport X: If this is a chase mission, wound target opposing agent. the TN is the target's combat." />
 			<property name="Victory Points" value="" />
 			<property name="Cover Level" value="" />
@@ -452,7 +452,7 @@
 			<property name="Bravado" value="" />
 			<property name="Faction" value="" />
 			<property name="Traits" value="Intrigue - Private - Craft - Bid Value" />
-			<property name="Rules" value="Attacker: After assigning, bid a value (1-9). The victory points, mission objective TN, and minimum TN of your actions are equal to your bid.&#xD;&#xA;Defender: After ypu assinging, you may bid a value (1-9). If it's higher than the Attacker's bid, attacking agents have no minimum TN, and the victory points, mission objective TN, and the minimum TN for your actions equal your bid." />
+			<property name="Rules" value="Attacker: After assigning, bid a value (1-9). The victory points, mission objective TN, and minimum TN of your actions are equal to your bid.&#xD;&#xA;Defender: After assigning, you may bid a value (1-9). If it's higher than the Attacker's bid, attacking agents have no minimum TN, and the victory points, mission objective TN, and the minimum TN for your actions equal your bid." />
 			<property name="Victory Points" value="*" />
 			<property name="Cover Level" value="2" />
 		</card>
@@ -497,7 +497,7 @@
 			<property name="Bravado" value="" />
 			<property name="Faction" value="" />
 			<property name="Traits" value="Intrigue - Public - Charisma +2" />
-			<property name="Rules" value="Atacker: Your agents may perform &quot;React Craft: After an Exposed agent declares an action, send this agent to your headquarters: Cancel the action.&quot;&#xD;&#xA;Defender: Your agents may perform &quot;React Craft: After an Exposed agent declares an action, send this agent to your headquarters: Cancel the action.&quot;" />
+			<property name="Rules" value="Attacker: Your agents may perform &quot;React Craft: After an Exposed agent declares an action, send this agent to your headquarters: Cancel the action.&quot;&#xD;&#xA;Defender: Your agents may perform &quot;React Craft: After an Exposed agent declares an action, send this agent to your headquarters: Cancel the action.&quot;" />
 			<property name="Victory Points" value="5" />
 			<property name="Cover Level" value="2" />
 		</card>
@@ -602,7 +602,7 @@
 			<property name="Bravado" value="3" />
 			<property name="Faction" value="" />
 			<property name="Traits" value="Solo Op - Public - Transport +1" />
-			<property name="Rules" value="Agent may not move into this solo op.&#xD;&#xA;Intel Transport 7: Reveal the top three cards of the mission deck. You may discard and replace the first mission in the mission queue with a chase mission revealed in this way. Discard the remaining revealed missions." />
+			<property name="Rules" value="Agents may not move into this solo op.&#xD;&#xA;Intel Transport 7: Reveal the top three cards of the mission deck. You may discard and replace the first mission in the mission queue with a chase mission revealed in this way. Discard the remaining revealed missions." />
 			<property name="Victory Points" value="" />
 			<property name="Cover Level" value="" />
 		</card>
@@ -617,7 +617,7 @@
 			<property name="Bravado" value="3" />
 			<property name="Faction" value="" />
 			<property name="Traits" value="Solo Op - Private - Transport +1" />
-			<property name="Rules" value="Agent's base skills may not be changed during this solo op.&#xD;&#xA;React Transport: Before one of your agents takes a wound: Prevent the wound." />
+			<property name="Rules" value="Agents base skills may not be changed during this solo op.&#xD;&#xA;React Transport: Before one of your agents takes a wound: Prevent the wound." />
 			<property name="Victory Points" value="" />
 			<property name="Cover Level" value="" />
 		</card>
@@ -891,7 +891,7 @@
 			<property name="Victory Points" value="" />
 			<property name="Cover Level" value="" />
 		</card>
-		<card id="48000f92-e7d9-462c-870f-f1a8060ce185" name="Gremlim">
+		<card id="48000f92-e7d9-462c-870f-f1a8060ce185" name="Gremlin">
 			<property name="Type" value="Agent" />
 			<property name="Expense Rating" value="5" />
 			<property name="Charisma" value="2" />
@@ -1007,7 +1007,7 @@
 			<property name="Bravado" value="2" />
 			<property name="Faction" value="Bloodvine" />
 			<property name="Traits" value="Faceman" />
-			<property name="Rules" value="Mision Charisma X: Target an opposing agent. Wound the target. The TN the target's charisma plus transport." />
+			<property name="Rules" value="Mission Charisma X: Target an opposing agent. Wound the target. The TN the target's charisma plus transport." />
 			<property name="Victory Points" value="" />
 			<property name="Cover Level" value="" />
 		</card>
@@ -1202,7 +1202,7 @@
 			<property name="Bravado" value="3" />
 			<property name="Faction" value="Freelancer" />
 			<property name="Traits" value="Faceman - Unique" />
-			<property name="Rules" value="React Charisma: After onr of your agents has his base skills reduced to 0: Give that Agent a skill bonus equal to his original base skills." />
+			<property name="Rules" value="React Charisma: After one of your agents has his base skills reduced to 0: Give that Agent a skill bonus equal to his original base skills." />
 			<property name="Victory Points" value="" />
 			<property name="Cover Level" value="" />
 		</card>
@@ -1352,7 +1352,7 @@
 			<property name="Bravado" value="3" />
 			<property name="Faction" value="Shadow Patriots" />
 			<property name="Traits" value="Pointman - Majestic" />
-			<property name="Rules" value="React Craft: Before Alexander Knight declares an action: Target a non-leader pointman agent you control. Alexander Knight may declare an action printed on the target." />
+			<property name="Rules" value="React Craft: Before Alexander Knight declares an action: Target a non-leader Pointman agent you control. Alexander Knight may declare an action printed on the target." />
 			<property name="Victory Points" value="" />
 			<property name="Cover Level" value="" />
 		</card>
@@ -1577,7 +1577,7 @@
 			<property name="Bravado" value="4" />
 			<property name="Faction" value="The Krypt" />
 			<property name="Traits" value="Pointman" />
-			<property name="Rules" value="Intel Craft: Target a solo op in another player's discard pile. Initiate a solo op mission phase with the target as the mission, asigining Lila as the attacking agent, even if she has won a solo op this turn." />
+			<property name="Rules" value="Intel Craft: Target a solo op in another player's discard pile. Initiate a solo op mission phase with the target as the mission, assigning Lila as the attacking agent, even if she has won a solo op this turn." />
 			<property name="Victory Points" value="" />
 			<property name="Cover Level" value="" />
 		</card>
@@ -1697,7 +1697,7 @@
 			<property name="Bravado" value="3" />
 			<property name="Faction" value="" />
 			<property name="Traits" value="Gadget" />
-			<property name="Rules" value="Mission Craft X: Target an opposing agent, if the target is Exposed, move him to headquaters. Otherwise expose the target, The TN is the target's craft." />
+			<property name="Rules" value="Mission Craft X: Target an opposing agent, if the target is Exposed, move him to headquarters. Otherwise expose the target, The TN is the target's craft." />
 			<property name="Victory Points" value="" />
 			<property name="Cover Level" value="" />
 		</card>
@@ -1844,9 +1844,9 @@
 			<property name="Transport" value="" />
 			<property name="Craft" value="" />
 			<property name="Level" value="" />
-			<property name="Bravado" value="3" />
+			<property name="Bravado" value="2" />
 			<property name="Faction" value="" />
-			<property name="Traits" value="" />
+			<property name="Traits" value="Fixer - Snoop" />
 			<property name="Rules" value="Fixer or Snoop only.&#xD;&#xA;React Craft X: After an opposing agent targets this agent with a Mission action: Wound the acting agent. The TN is the acting agent's combat." />
 			<property name="Victory Points" value="" />
 			<property name="Cover Level" value="" />
@@ -2027,7 +2027,7 @@
 			<property name="Bravado" value="" />
 			<property name="Faction" value="Bloodvine" />
 			<property name="Traits" value="Faceman - Soldier" />
-			<property name="Rules" value="Combat actions performed by enemy agents hae +2 TN. After Gilante resolves a charisma action targeting one enemy agent, wound the target." />
+			<property name="Rules" value="Combat actions performed by enemy agents have +2 TN. After Gilante resolves a charisma action targeting one enemy agent, wound the target." />
 			<property name="Victory Points" value="" />
 			<property name="Cover Level" value="" />
 		</card>
@@ -2042,7 +2042,7 @@
 			<property name="Bravado" value="" />
 			<property name="Faction" value="Shadow Patriots" />
 			<property name="Traits" value="Fixer - Majestic" />
-			<property name="Rules" value="While Endeavour is your leader, before an agent you control declares an action, you may reveal a card from your hand with the Majetic trait. Your agent may declare an action on the revealed card. Discard the card after the action is resolved." />
+			<property name="Rules" value="While Endeavour is your leader, before an agent you control declares an action, you may reveal a card from your hand with the Majestic trait. Your agent may declare an action on the revealed card. Discard the card after the action is resolved." />
 			<property name="Victory Points" value="" />
 			<property name="Cover Level" value="" />
 		</card>

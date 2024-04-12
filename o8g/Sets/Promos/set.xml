@@ -606,6 +606,21 @@
 			<property name="Victory Points" value="" />
 			<property name="Cover Level" value="" />
 		</card>
+		<card id="c4d76748-f6db-425e-bb9d-2f06455357ae" name="On the Grid">
+			<property name="Type" value="Action" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="2" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="" />
+			<property name="Rules" value="While this card is attached, the attacker and defender mission text gains: &quot;After one of your agents becomes Exposed, move the agent to headquarters.&quot; Mission Craft 3: Attach this card to the current mission." />
+			<property name="Victory Points" value="" />
+			<property name="Cover Level" value="" />
+		</card>
 		<card id="7ef6a7f6-c7b3-44f4-8dbd-1bb7682dcb97" name="Cynthia Pride">
 			<property name="Type" value="Agent" />
 			<property name="Expense Rating" value="8" />
@@ -680,6 +695,126 @@
 			<property name="Rules" value="React Charisma: Before a player wins by Victory Points: No player wins until the end of the turn. Then, the player with the most Victory Points wins. If any such players are tied, the one who first reached 20 Victory Points wins." />
 			<property name="Victory Points" value="" />
 			<property name="Cover Level" value="" />
+		</card>
+		<card id="2d7756cf-5b17-4ffe-802e-4818bd5819c4" name="Big Splash at Sea World">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Chase - Public - Transport +2" />
+			<property name="Rules" value="Attacker: Your agents have -1 to all skills for each animal in the room.&#xD;&#xA;Defender: Your agents have +1 to all skills for each animal in the room." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="4" />
+		</card>
+		<card id="5def4733-da16-4052-bf3b-6998adce5593" name="Not THIS Federal Building, You Don't">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Chase - Public - Combat +6" />
+			<property name="Rules" value="Attacker: You may not extend to this mission.&#xD;&#xA;Defender: If you lose this mission, until the end of the game your agents have -4 expense for activating gear." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="4" />
+		</card>
+		<card id="e978c8ff-06fb-4d62-94ef-4528a1224be8" name="Golden Gate Getaway">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Chase - Public - Transport +5" />
+			<property name="Rules" value="Attacker: If you control the agent with the highest transport at the mission, the mission's objective is lowered by 2.&#xD;&#xA;Defender: If you control the agent with the highest transport at the mission, the mission's objective is raised by 2." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="1" />
+		</card>
+		<card id="5837d26b-ddd2-4f87-bc38-26d67c5984e8" name="Chaos on Capitol Hill">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Chase - Private - Transport +5" />
+			<property name="Rules" value="Attacker: If you win this mission, your leader gains +2 charisma permanently.&#xD;&#xA;Defender: If you win this mission, your leader gains +2 charisma permanently." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="3" />
+		</card>
+		<card id="45c75289-1347-4f34-a3d6-5e1273420e45" name="Larceny at the Louvre">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Intrigue - Private - Transport +5" />
+			<property name="Rules" value="Attacker: You may not perform combat and transport actions.&#xD;&#xA;Defender: You may not perform combat and transport actions." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="6" />
+		</card>
+		<card id="c99d1cff-779f-4b6e-a57d-7874bacb2cb2" name="Ill Wind over White Chapel">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Intrigue - Public - Craft +5" />
+			<property name="Rules" value="Attacker: Actions with a TN greater than 7 are canceled.&#xD;&#xA;Defender: Actions with a TN greater than 7 are canceled." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="4" />
+		</card>
+		<card id="d93947c1-45e4-4fbe-9534-099849919694" name="The Kafka Syndrome">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Combat - Public - Charisma +4" />
+			<property name="Rules" value="Attacker: Your agents may perform 'Mission Combat: Wound an opposing Exposed agent.'&#xD;&#xA;Defender: Your agents may perform 'Mission Combat: Wound an opposing Exposed agent.'" />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="2" />
+		</card>
+		<card id="7bafd46a-a74f-47be-bbaa-96b323b7d063" name="Countdown at Puerta del Sol">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Chase - Public - Charisma +6" />
+			<property name="Rules" value="Attacker: If you successfully perform 4 Mission Transport actions, you immediately win the mission.&#xD;&#xA;Defender: All Mission actions performed by opposing agents have +2 TN." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="2" />
 		</card>
 	</cards>
 </set>

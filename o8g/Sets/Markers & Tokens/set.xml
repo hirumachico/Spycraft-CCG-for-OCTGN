@@ -17,6 +17,10 @@
 		<marker id="69a2514e-9d49-4f8d-8408-dc069625e07c" name="Mission Action Taken" />
 		<marker id="c3dcf14d-65ae-4356-b702-f4b8fda91313" name="Default Mission Action Taken" />
 		<marker id="05a5f34f-e4d2-4ee0-9906-b03f70b02a01" name="Text Action Taken" />
+		<marker id="6f7c5395-61f1-4810-a68b-f2e0eb6a7627" name="Minus One Counter" />
+		<marker id="23a3767d-d1c2-40c8-bfd6-d905d58ed151" name="Minus Two Counter" />
+		<marker id="c33d870e-3bac-4768-8dcc-e68ae46c8d3f" name="Plus One Counter" />
+		<marker id="ecd2f0b0-4863-4eb8-a585-7c504a312393" name="Plus Two Counter" />
 	</markers>
 	<cards>
 		<card id="4fdb3309-7b42-41a6-a2b2-34ce2b75f831" name="Standard Reference Card">

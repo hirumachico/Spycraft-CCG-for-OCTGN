@@ -39,10 +39,11 @@ def gameSetup(group, x = 0, y = 0): # WiP
    chooseSide()
    debugNotify("Setting Deck Variables", 2) #Debug
    deck = me.piles['Deck']
-   missionDeck = shared.Missions
-   if len(missionDeck) == 0 or len(missionDeck) > 24: 
-      delayed_whisper(":::ERROR::: Please load the mission deck properly before setting up the game")
-      return
+   # moved block below further down
+   # missionDeck = shared.Missions
+   # if len(missionDeck) == 0 or len(missionDeck) > 24: 
+   #   delayed_whisper(":::ERROR::: Please load the mission deck properly before setting up the game")
+   #   return
    debugNotify("Checking hand size",2)
    if len(me.hand) < 4 and not confirm(":::Illegal Deck:::\n\nYou must have at least 4 leaders in your deck.\n\nProceed Anyway?"): return
    debugNotify("Arranging Leaders",2)
@@ -64,7 +65,7 @@ def gameSetup(group, x = 0, y = 0): # WiP
          debugNotify("Moving First Leader to table",2)
          leadersDict[1] = leader._id
          leader.moveToTable(0, (playerside * 130) + yaxisMove()) # Level 1 leader is moved to the table
-         leader.markers[mdict['Fresh']] += 1
+         #leader.markers[mdict['Fresh']] += 1  #removed this step as initial leaders are not considered 'Fresh' on Turn 1 and can brief (see Shadow Academy rulebook first turn example)
       else:
          debugNotify("Moving high level Leader to table",2)
          leadersDict[num(leader.Level)] = leader._id
@@ -87,22 +88,30 @@ def gameSetup(group, x = 0, y = 0): # WiP
    if Faction == "The Krypt": table.create("4fdb3309-7b42-41a6-a2b2-34ce2b75f831",playerside * -280 - 50, (playerside * 120) + yaxisMove(),1,True) # Creating a standard reference card.
    if Faction == "Nine Tiger": table.create("4fdb3309-7b42-41a6-a2b2-34ce2b75f831",playerside * -280 - 50, (playerside * 120) + yaxisMove(),1,True) # Creating a standard reference card.
    if Faction == "Shadow Patriots": table.create("4fdb3309-7b42-41a6-a2b2-34ce2b75f831",playerside * -280 - 50, (playerside * 120) + yaxisMove(),1,True) # Creating a standard reference card.
-   debugNotify("Preparing Mission Deck",2)
-   currMissionsVar = getGlobalVariable('currentMissions')
-   debugNotify("currMissionsVar = {}".format(currMissionsVar),2)
-   if currMissionsVar != 'CHECKED OUT':
-      currentMissions = eval(currMissionsVar)
-      debugNotify("currentMissions = {}".format(currentMissions),4)
-      if len(currentMissions) == 0: 
-         shuffle(missionDeck)
-         startingMissions = missionDeck.top(5)
-         for mission in startingMissions: prepMission(mission, True)
-      else: debugNotify("Missions already setup by another player. Aborting mission deck setup",4)
-   else: debugNotify("Missions currently being setup by another player",4)
    if PlayerColor == "#": defPlayerColor()
    shuffle(deck)
    drawMany(deck, 7, silent = True)
    debugNotify("<<< gameSetup()") #Debug
+    
+def missionQueueSetup(group, x = 0, y = 0):
+   debugNotify(">>> Preparing Mission Deck",2)
+   missionDeck = shared.Missions
+   if len(missionDeck) < 24: # == 0 or len(missionDeck) > 24: #hirumachico changed to allow for larger mission deck size
+      delayed_whisper(":::ERROR::: Please load the mission deck properly before setting up the mission queue")
+      return
+   currMissionsVar = getGlobalVariable('currentMissions')
+   notify("currMissionsVar = {}".format(currMissionsVar))
+   if currMissionsVar == '[]':
+      currentMissions = eval(currMissionsVar)
+      notify("currentMissions = {}".format(currentMissions))
+      if len(currentMissions) == 0: 
+         shuffle(missionDeck)
+         startingMissions = missionDeck.top(5)
+         for mission in startingMissions: prepMission(mission, True)
+      else: notify("Missions already setup by another player. Aborting mission deck setup")
+   else: notify("Missions currently being setup by another player")
+   fixMissions(group, x, y)
+   debugNotify("<<< end missionQueueSetup",2)
     
 
 #---------------------------------------------------------------------------
@@ -172,6 +181,7 @@ def activate(card, x = 0, y = 0):
          notify("{} Activates their level {} leader: {}".format(me,card.Level,card))
          card.orientation = Rot0
          card.moveToTable(playerside * cwidth() / -2, yaxisMove() + (cheight() * playerside / 2))
+         orgAttachments(card)
          if num(card.Level) < 4: card.markers[mdict['Fresh']] += 1
          card.markers[mdict['Briefed']] = 0
          for c in table:
@@ -210,7 +220,9 @@ def discard(card, x = 0, y = 0):
       card.moveTo(card.owner.Discard)
    else: 
       if card.highlight: finishRun()
-      if scrubMission(card) == 'ABORT': return
+      scrubResult = scrubMission(card)
+      if scrubResult == 'ABORT': return
+      elif scrubResult != 'NOTINCURRENTQUEUE':
       if prepMission(shared.Missions.top()) == 'ABORT': return
       clearAttachLinks(card)
       card.moveTo(shared.piles['Mission Discard'])
@@ -249,7 +261,7 @@ def runMission(card, x = 0, y = 0):
    for c in table:
       debugNotify("Checking table card: {}".format(c),4)
       if c.Type == 'Mission' and c.highlight:
-         delayed_whisper(":::ERROR::: There's already a run in progress on {}. Please make sure that run is complete by winning, discarding or cleasring that mission, and then redo this action.".format(c))
+         delayed_whisper(":::ERROR::: There's already a run in progress on {}. Please make sure that run is complete by winning, discarding or clearing that mission, and then redo this action.".format(c))
          return 'ABORT'
    if fetchProperty(card, 'Type') == 'Mission': 
       debugNotify("About to start the run:",2)
@@ -276,7 +288,7 @@ def runTargetMission(group, x = 0, y = 0):
 def winMission(card, x = 0, y = 0):
    mute()
    if card.Type == 'Mission':
-      if confirm("Have you just won {}?".format(card.name)): # We put this on its own 'if' clause so that saying 'No' to it doesn't tell the player that they can only win missions or solo ops
+      if confirm("Have you just won {}?".format(card.name)): # We put this on its own 'if' clause so that answering 'No' to it doesn't tell the player that they can only win missions or solo ops
          if card.highlight: finishRun()
          if scrubMission(card) == 'ABORT': return 'ABORT'
          if prepMission(shared.Missions.top()) == 'ABORT': return 'ABORT'
@@ -319,7 +331,7 @@ def cancelMission(group, x = 0, y = 0):
          finishRun()
          missionCard = card
          break
-   if missionCard: notify("{} has cancelled {}".format(me,missionCard))
+   if missionCard: notify("{} has canceled {}".format(me,missionCard))
     
 def inspectCard(card, x = 0, y = 0): # This function shows the player the card text, to allow for easy reading until High Quality scans are procured.
    debugNotify(">>> inspectCard()") #Debug
@@ -357,7 +369,7 @@ def snoop(card, x = 0, y = 0):
       
 def brief(card, x = 0, y = 0):
    mute()
-   if card.markers[mdict['Fresh']] > 0 and not confirm("{} has enterred play this turn and is not normally allowed to perform a brief. Proceed anyway?".format(card.name)): return
+   if card.markers[mdict['Fresh']] > 0 and not confirm("{} has entered play this turn and is not normally allowed to perform a brief. Proceed anyway?".format(card.name)): return
    if card.markers[mdict['Demoted']] > 0 and not confirm("{} is a demoted leader and is not normally allowed to perform a brief. Proceed anyway?".format(card.name)): return
    if card.markers[mdict['Brief']] > 0 and not confirm("{} has already briefed a leader this turn. Proceed anyway?".format(card.name)): return
    if (not card.isFaceUp or card.Type != 'Leader') and not confirm("Only active leaders may perform a brief action. Proceed anyway?".format(card.name)): return
@@ -639,3 +651,59 @@ def download_o8c(group,x=0,y=0):
    openUrl("http://dbzer0.com/pub/SpycraftCCG/sets/SpycraftCCG-Sets-Bundle.o8c")
 
     
+def concede(group,x=0,y=0):
+   notify("=== {} Concedes the Game ===".format(me))
+
+def replaceTargetedMissionWithSelectedMission(card, x = 0, y = 0):
+    mute()
+    currMissionsVar = getGlobalVariable('currentMissions')
+    #firstMission = Card(currMissionsVar[0])
+    for c in table:
+       if c.Type == 'Mission' and c.targetedBy and c.targetedBy == me: targetedMission = c
+    notify("Targeted mission is {} and its type is {} and highlight is {}.  New mission is {} and its type is {}.".format(targetedMission.name, targetedMission.Type, targetedMission.highlight, card.name, card.Type))
+    if card.Type == 'Mission':
+       if confirm("Do you wish to replace the targeted mission {} with mission {}?".format(targetedMission.name, card.name)):
+	   x,y = targetedMission.position
+	   if targetedMission.highlight != '': card.highlight = targetedMission.highlight
+	   if targetedMission.isFaceUp: FaceDown = False
+	   else: FaceDown = True
+	   clearAttachLinks(targetedMission)
+	   currentMissions = eval(currMissionsVar)
+       if targetedMission.orientation == Rot90: isRotated = True
+       else: isRotated = False
+       targetIndex = currentMissions.index(targetedMission._id)
+       card.moveToTable(x, y, FaceDown)
+       if FaceDown: card.isFaceUp = False
+       else: card.isFaceUp = True
+       if isRotated: card.orientation = Rot90
+       if card._id in currentMissions:
+          currentMissions.remove(card._id)
+          #notify("currentMissions 1: {}".format(currentMissions))
+          currentMissions.insert(targetIndex, card._id)
+          #notify("currentMissions 2: {}".format(currentMissions))
+          currentMissions.remove(targetedMission._id)
+          #notify("currentMissions 3: {}".format(currentMissions))
+          targetedMission.moveTo(shared.piles['Mission Discard'])
+          setGlobalVariable('currentMissions', str(currentMissions))
+          if prepMission(shared.Missions.top()) == 'ABORT': return 'ABORT'
+       else:
+          currentMissions[targetIndex] = card._id
+          targetedMission.moveTo(shared.piles['Mission Discard'])
+          setGlobalVariable('currentMissions', str(currentMissions))
+       notify("Targeted mission {} replaced with mission {}".format(targetedMission.name, card.name))
+    else:
+	   whisper(":::ERROR::: You can only replace the first mission in the queue with another mission card.")
+	   return 'ABORT'
+    return 'OK'
+
+def customMarker(card,x=0,y=0):
+   #notify("=== {} has been selected for a custom marker ===".format(card))
+   marker, qty = askMarker()
+   if qty == 0: return
+   card.markers[marker] += qty
+   #notify("{} is the marker label and {} is the quantity".format(marker, qty))
+
+def moveTopMissionCardToTableFacedown(group, x=0, y=0):
+	card = group.top()
+	card.moveToTable(300, -40, True)
+	card.orientation = Rot90

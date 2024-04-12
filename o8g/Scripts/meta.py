@@ -57,7 +57,7 @@ def resetAll(): # Clears all the global variables in order to start a new game.
    leadersDict.clear()
    setGlobalVariable('Host Cards',str(hostCards))
    me.counters['Victory Points'].value = 0
-   if len(shared.Missions) == 24: setGlobalVariable('currentMissions', '[]') # If the mission deck is exactly 24 cards, then it means it's a fresh game, and we clean the mission queue,
+   if len(shared.Missions) >= 24: setGlobalVariable('currentMissions', '[]') # If the mission deck is exactly 24 cards, then it means it's a fresh game, and we clean the mission queue,
                                                                              # If it's less, then it means the mission queue has already been setup by another player so we don't do it again.
    if debugVerbosity != -1 and confirm("Reset Debug Verbosity?"): debugVerbosity = -1 
    debugNotify("<<< resetAll()") #Debug
@@ -73,7 +73,7 @@ def prepMission(card, silent = False):
    setGlobalVariable('currentMissions','CHECKED OUT') # If the missions var is not being manipulated by another, we set it as checked out ourselves.
    currentMissions = eval(currMissionsVar)
    currentMissions.append(card._id)
-   debugNotify("About to iterate the list: {}".format(currentMissions),2)
+   #notify("About to iterate the list: {}".format(currentMissions))
    for iter in range(len(currentMissions)):
       Mission = Card(currentMissions[iter])
       if iter - 1 > 0 and not Mission.isFaceUp: missionFaceDown = True # Last three missions are face down unless they were already face up
@@ -84,10 +84,44 @@ def prepMission(card, silent = False):
          Mission.orientation = Rot0
          if not Mission.isFaceUp: Mission.isFaceUp = True # Backup check
       # rnd(1,100) # We put a delay here to allow the table to read the card autoscripts before we try to execute them.
-   debugNotify("About to set currentMissions",2) #Debug      
+   #notify("About to set currentMissions") #Debug ,2)      
    setGlobalVariable('currentMissions', str(currentMissions))
    if not silent: notify(":> Mission Queue Updated!")
+   currMissionsVar = getGlobalVariable('currentMissions')
+   currentMissions = eval(currMissionsVar)
+   #notify("currentMissions after set: {}".format(currentMissions))
    debugNotify("<<< prepMission()") #Debug
+
+def resetMissions(group, x = 0, y = 0):
+   debugNotify("Resetting Mission Deck",2)
+   currMissionsVar = getGlobalVariable('currentMissions')
+   debugNotify("currMissionsVar = {}".format(currMissionsVar),2)
+   missionDeck = shared.Missions
+   isMissionInProgress = False
+   if currMissionsVar != 'CHECKED OUT':
+      currentMissions = eval(currMissionsVar)      
+      debugNotify("About to iterate the list: {}".format(currentMissions),2)
+      for iter in range(len(currentMissions)):
+         Mission = Card(currentMissions[iter])
+         if not Mission.highlight: Mission.moveTo(missionDeck)
+         else:
+            isMissionInProgress = True
+            missionInProgress = Mission
+            missionInProgIndex = currentMissions.index(missionInProgress._id)
+      setGlobalVariable('currentMissions', '[]')
+      shuffle(missionDeck)
+      startingMissions = missionDeck.top(5)
+      for mission in startingMissions: prepMission(mission, True)
+      if isMissionInProgress:
+         currMissionsVar = getGlobalVariable('currentMissions')
+         currentMissions = eval(currMissionsVar)
+         for c in table:
+            if c._id == currentMissions[missionInProgIndex]:
+               c.moveTo(missionDeck)
+               shuffle(missionDeck)
+         currentMissions[missionInProgIndex] = missionInProgress._id
+         setGlobalVariable('currentMissions', str(currentMissions))
+   else: debugNotify("Missions currently checked out by another player",4)
 
 def scrubMission(card):
 # Function cleans a mission card from the shared variable which shows which missions are on the table
@@ -99,7 +133,8 @@ def scrubMission(card):
    setGlobalVariable('currentMissions','CHECKED OUT') # If the missions var is not being manipulated by another, we set it as checked out ourselves.
    debugNotify("About to remove mission",2)
    currentMissions = eval(currMissionsVar)
-   currentMissions.remove(card._id)
+   if card._id in currentMissions: currentMissions.remove(card._id)
+   else: return 'NOTINCURRENTQUEUE'
    debugNotify("About to set currentMissions",2) #Debug      
    setGlobalVariable('currentMissions', str(currentMissions))
    debugNotify("<<< scrubMission()") #Debug
@@ -128,16 +163,16 @@ def findHost():
                      if card.targetedBy # Cards that are targeted by the player
                      and card.targetedBy == me 
                      and card.controller == me # Which the player control
-                     and ((card.Type == 'Agent' or (card.Type == 'Leader' and card.isFaceUp)) # That are either Agents or Active Leader
+                     and ((card.Type == 'Agent' or (card.Type == 'Leader')) # That are either Agents or Leader (removed " and card.isFaceUp" from check as inactive leaders may also have gear attached)
                         or (not card.isFaceUp                    # Or that are face down (i.e. pretending to be agents)
-                           and card.orientation == Rot0          # and are not turned sideways (which is reserved for missions and incactive leaders) 
+                           #and card.orientation == Rot0          # and are not turned sideways (which is reserved for missions and inactive leaders) 
                            and not hostCards.has_key(card._id))) # and are not attached to other cards already
                      ]
-   debugNotify("Finished gatherting potential hosts",2)
+   debugNotify("Finished gathering potential hosts",2)
    if len(potentialHosts) == 0:
       delayed_whisper(":::ERROR::: Please Target a valid host for this gear!")
       result = None
-   else: result = potentialHosts[0] # If a propert host is targeted, then we return it to the calling function. We always return just the first result.
+   else: result = potentialHosts[0] # If a proper host is targeted, then we return it to the calling function. We always return just the first result.
    debugNotify("<<< findHost() with result {}".format(result), 3)
    return result
 
@@ -200,13 +235,13 @@ def orgAttachments(card,facing = 'Same'):
          else: FaceDown = True
       attachment.moveToTable(x + (xAlg * attNR), y + (yAlg * attNR),FaceDown)
       if attachment.controller == me and FaceDown: attachment.peek()
-      attachment.setIndex(len(cardAttachements) - attNR) # This whole thing has become unnecessary complicated because sendToBack() does not work reliably
-      debugNotify("{} index = {}".format(attachment,attachment.getIndex), 4) # Debug
+      attachment.index = (len(cardAttachements) - attNR) # This whole thing has become unnecessary complicated because sendToBack() does not work reliably
+      debugNotify("{} index = {}".format(attachment,attachment.index), 4) # Debug
       attNR += 1
       debugNotify("Moving {}, Iter = {}".format(attachment,attNR), 4)
    card.sendToFront() # Because things don't work as they should :(
    if debugVerbosity >= 4: # Checking Final Indices
-      for attachment in cardAttachements: notify("{} index = {}".format(attachment,attachment.getIndex)) # Debug
+      for attachment in cardAttachements: notify("{} index = {}".format(attachment,attachment.index)) # Debug
    debugNotify("<<< orgAttachments()", 3) #Debug      
 
 #------------------------------------------------------------------------------

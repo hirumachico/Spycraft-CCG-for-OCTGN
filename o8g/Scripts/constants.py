@@ -10,7 +10,11 @@ mdict = { # A dictionary which holds all the hard coded markers (in the markers 
     'Starting'       : ("Starting Player", "fce69579-dbbf-428f-852f-86dbfdc97c67"),
     'DefaultMission' : ("Default Mission Action Taken", "c3dcf14d-65ae-4356-b702-f4b8fda91313"),
     'MissionAction'  : ("Mission Action Taken", "69a2514e-9d49-4f8d-8408-dc069625e07c"),
-    'TextAction'     : ("Text Action Taken", "05a5f34f-e4d2-4ee0-9906-b03f70b02a01")
+    'TextAction'     : ("Text Action Taken", "05a5f34f-e4d2-4ee0-9906-b03f70b02a01"),
+    '-1 Counter'     : ("Minus One Counter", "6f7c5395-61f1-4810-a68b-f2e0eb6a7627"),
+    '-2 Counter'     : ("Minus Two Counter", "23a3767d-d1c2-40c8-bfd6-d905d58ed151"),
+    '+1 Counter'     : ("Plus One Counter", "c33d870e-3bac-4768-8dcc-e68ae46c8d3f"),
+    '+2 Counter'     : ("Plus Two Counter", "ecd2f0b0-4863-4eb8-a585-7c504a312393")
 }
 
 AttackerColor = "#ff0000"

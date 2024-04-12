@@ -15,7 +15,7 @@
       setsurl="https://github.com/db0/Spycraft-CCG-for-OCTGN#available-sets"
       gameurl="https://github.com/db0/Spycraft-CCG-for-OCTGN#spycraft-ccg-plugin-for-octgn"
       authors="Db0, Lord Nat"
-      scriptVersion="3.1.0.1"
+      scriptVersion="3.1.0.2"
       iconurl="https://raw.github.com/db0/Spycraft-CCG-for-OCTGN/master/spycraft_logo.jpg">
    <scripts>
       <script src="Scripts/actions.py" />
@@ -52,11 +52,13 @@
 	<table name="Table" visibility="undefined" ordered="False" width="1000" height="450" background="Table/Intel.jpg" backgroundStyle="uniformToFill">
 		<cardaction menu="Smart Action (Activate/Score/Participate...)" default="True" shortcut="Ctrl+S" execute="defaultAction" />
 		<groupactions menu="Game...">
-         <groupaction menu="Set up" default="False" shortcut="Ctrl+Shift+S" execute="gameSetup" />
+         <groupaction menu="Player Set up" default="False" shortcut="Ctrl+Shift+S" execute="gameSetup" />
+         <groupaction menu="Mission Queue Set up" default="False" shortcut="Ctrl+Shift+Q" execute="missionQueueSetup" />
          <groupaction menu="Concede" default="False" shortcut="Ctrl+Shift+C" execute="concede" />
 			<groupaction menu="Download Sets Card Images." shortcut="Ctrl+G" default="False" execute="download_o8c" />
-         <groupaction menu="Unstick Mission Queue" default="False" shortcut="Ctrl+Shift+M" execute="fixMissions" /> 
-<!--         <groupaction menu="Display Missions Queue" default="False" execute="debugMissions" />  -->
+         <groupaction menu="Unstick Mission Queue" default="False" shortcut="Ctrl+Shift+U" execute="fixMissions" /> 
+         <groupaction menu="Display Missions Queue" default="False" execute="debugMissions" />
+		 <groupaction menu="Reset Mission Queue" default="False" execute="resetMissions" />
          <groupaction menu="Debug" default="False" shortcut="Ctrl+Shift+D" execute="TrialError" /> 
 		</groupactions>
       <groupactions menu="Phases...">
@@ -77,6 +79,8 @@
 		<cardaction menu="Brief Target Leader" default="False" shortcut="Ctrl+B" execute="brief" />
 		<cardaction menu="Clear Used Abilities" default="False" shortcut="Ctrl+C"  execute="clear" />
 		<groupaction menu="Run Target Mission" default="False" shortcut="Ctrl+A" execute="runTargetMission" />
+		<cardaction menu="Replace Mission" default="False" execute="replaceTargetedMissionWithSelectedMission" />
+		<cardaction menu="Add Custom Marker" default="False" shortcut="Ctrl+M" execute="customMarker" />
       <cardaction menu="Participate/Leave Mission" default="False" shortcut="Ctrl+P" execute="participate" />
       <groupaction menu="Win Target Mission" default="False" shortcut="Ctrl+W" execute="winTargetMission" />
       <groupaction menu="Pull out target agents from Mission" default="False" execute="abortMission" />
@@ -84,9 +88,9 @@
       <cardaction menu="Inspect" default="False" shortcut="Ctrl+I" execute="inspectCard" />
       <groupaction menu="Inspect Target" default="False" shortcut="Ctrl+I" execute="inspectTargetCard" />
       <groupactions menu="Announcements...">
-         <groupaction menu="Declare Pass." default="False" shortcut="Ctrl+Enter" execute="announcePass" />
+         <groupaction menu="Declare Pass." default="False" shortcut="Ctrl+Enter" execute="Pass" />
       </groupactions>
-<!--      <cardaction menu="Show Card Position" default="False" shortcut="Ctrl+Shift+X" execute="ShowPosC" /> -->
+<!--  <cardaction menu="Show Card Position" default="False" shortcut="Ctrl+Shift+X" execute="ShowPosC" /> -->
 	</table>
 	<player summary="{#Victory Points} VP/ {#Hand} Cards">
 		<hand name="Hand" visibility="me" ordered="False" width="63" height="88" icon="Groups/hand.jpg">
@@ -95,7 +99,7 @@
 			<cardaction menu="Play as Face-Down Agent" default="False" execute="playAgent" />
 			<cardaction menu="Play as Face-Down Gear" default="False" execute="playGear" />
 			<cardaction menu="Discard as Bravado" default="False" shortcut="Ctrl+B" execute="playBravado" />
-         <cardaction menu="Inspect" default="False" shortcut="Ctrl+I" execute="inspectCard" />
+			<cardaction menu="Inspect" default="False" shortcut="Ctrl+I" execute="inspectCard" />
 			<cardaction menu="Discard" default="False" shortcut="del" execute="discardFromHand" />
 			<groupaction menu="Discard at Random" default="False" execute="handRandomDiscard" />
 		</hand>
@@ -115,8 +119,10 @@
 	<shared>
 		<group name="Missions" visibility="none" ordered="False" width="63" height="88" icon="Groups/H_Mission_50.png" collapsed="False">
 			<groupaction menu="Shuffle" default="False" execute="shuffle" />
+			<groupaction menu="Move Top Card To Table Facedown" default="False" execute="moveTopMissionCardToTableFacedown" />
 		</group>
-		<group name="Mission Discard" visibility="all" ordered="False" width="63" height="88" icon="Groups/graveyard.png" collapsed="False" />
+		<group name="Mission Discard" visibility="all" ordered="False" width="63" height="88" icon="Groups/graveyard.png" collapsed="False">
+		</group>
 	</shared>
 	<deck>
 		<section name="Deck" group="Deck" />
