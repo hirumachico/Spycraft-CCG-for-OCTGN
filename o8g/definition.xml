@@ -2,19 +2,19 @@
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
       xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
       name="Spycraft" 
-      id="d1d8cc2c-e817-4b4d-9449-3315bbd3c643" 
-      octgnVersion="3.1.15.112" 
-      version="1.1.2.0" 
+      id="c3ec8d15-2432-4bad-aef3-67f8304dc50e" 
+      octgnVersion="3.4.389.0" 
+      version="1.1.2.1" 
       markersize="16"
       tags="duel espionage objectives AEG"
-      description="Spycraft CCG is a espionage-themed card game for 2-6 players.
+      description="Spycraft CCG on OCTGN is a espionage-themed card game for 2 players.
       &#xD;&#xD;&#xD;Espionage is a grand shadow play in which every act is an ideological war and every actor carries the fate of nations in his armor-lined briefcase. The greatest among them are silent soldiers of private wars ... wars fought behind the scenes for reasons we never truly understand. They lie, cheat, and steal to protect truth, integrity, and security. They kill to save lives. Spies specialize in treachery so no one else has to, and find honor in conviction alone.
       &#xD;&#xD;The Spycraft CCG brings these anti-heroes to life, in a world where they have outlived their utility as government pawns. What happens when spies strike out on their own to change the world they helped to destroy? How far will they go to save it? Welcome to the first step toward a very different future...
       &#xd;&#xd;Automation rank: D
       &#xd;(This game definition contains no automation.)"
       setsurl="https://github.com/db0/Spycraft-CCG-for-OCTGN#available-sets"
       gameurl="https://github.com/db0/Spycraft-CCG-for-OCTGN#spycraft-ccg-plugin-for-octgn"
-      authors="Db0, Lord Nat"
+      authors="Db0, Lord Nat, hirumachico"
       scriptVersion="3.1.0.2"
       iconurl="https://raw.github.com/db0/Spycraft-CCG-for-OCTGN/master/spycraft_logo.jpg">
    <scripts>
