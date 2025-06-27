@@ -1566,6 +1566,21 @@
 			<property name="Victory Points" value="" />
 			<property name="Cover Level" value="" />
 		</card>
+		<card id="db2fc57c-3053-4909-829b-5c98a90c061a" name="Project: Omen Star (pre-errata)">
+			<property name="Type" value="Action" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="4" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="" />
+			<property name="Rules" value="Intel Craft 9: No player can activate agents until the end of the turn. Starting with you and proceeding in turn order, each player must wound, expose, or deactivate one of their target active non-leader agents until all active agents have been targeted. Leaders cannot assign to mission teams this turn." />
+			<property name="Victory Points" value="" />
+			<property name="Cover Level" value="" />
+		</card>
 		<card id="f81e56ec-d639-464b-b2fd-4d9886acbd22" name="Project: Pitfall Assault">
 			<property name="Type" value="Mission" />
 			<property name="Expense Rating" value="" />
