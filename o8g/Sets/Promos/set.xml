@@ -816,5 +816,365 @@
 			<property name="Victory Points" value="7" />
 			<property name="Cover Level" value="2" />
 		</card>
+		<card id="f3b60323-5680-4df0-9487-1425dbcaf209" name="Race for Life at Beulah Park">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Chase - Private - Transport +4" />
+			<property name="Rules" value="Attacker: If you perform 6 or more Mission actions, you lose this mission.&#xD;&#xA;Defender: Your actions have +1 TN." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="3" />
+		</card>
+		<card id="ee4ce7cf-7aea-408f-b7aa-982aebbec4f8" name="Dark Rendezvous at Bunker Hill">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Intrigue - Private - Charisma +4" />
+			<property name="Rules" value="Attacker: This mission is worth +3 Victory Points for you if you are wearing a red coat (or shirt).&#xD;&#xA;Defender: Your agents have +2 to all skills if your opponent is wearing a red coat (or shirt)." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="3" />
+		</card>
+		<card id="306d39cf-5fd9-4394-abea-12c469d08eee" name="Countdown to Forever">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Intrigue - Private - Transport +4" />
+			<property name="Rules" value="Attacker: If you win this mission, for the rest of the game, you draw an additional card during the Debrief Phase.&#xD;&#xA;Defender: If you win this mission, for the rest of the game, your opponents must discard a card at the end of the Debrief Phase." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="1" />
+		</card>
+		<card id="35ce92c3-0cfa-4dec-ba44-6fc1ca7908f4" name="The Safe House After Dark">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Intrigue - Private - Charisma +5" />
+			<property name="Rules" value="Attacker: Your agents have +1 to all skills if you are playing in a bar or a restaurant.&#xD;&#xA;Defender: Your agents have +2 to all skills if you have a drink at the table." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="5" />
+		</card>
+		<card id="b51394b7-affc-44c1-bb3a-04eb5c7cac10" name="Whitewater Rebellion">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Fight - Private - Combat +5" />
+			<property name="Rules" value="Attacker: Agents in your mission team have -2 cover and -1 combat for each gear card they have equipped.&#xD;&#xA;Defender: Agents in your mission team have -2 cover and -1 combat for each gear card they have equipped." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="6" />
+		</card>
+		<card id="75d91c32-32e1-4739-8ed8-5a228a9dfd96" name="Death Blimp at the Horseshoe">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Fight - Public - Combat +6" />
+			<property name="Rules" value="Attacker: This mission is worth +3 Victory Points if the word 'Michigan' is printed within eyesight.&#xD;&#xA;Defender: This mission is worth +3 Victory Points if the word 'Michigan' is printed within eyesight." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="2" />
+		</card>
+		<card id="e86074e6-11ad-4c42-b296-de3ee7e74af8" name="Dead Men Don't Float">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Intrigue - Private - Craft +4" />
+			<property name="Rules" value="Attacker: Your non-Exposed agents may perform: 'Mission Combat 4: Wound an opposing agent.'&#xD;&#xA;Defender: After one of your agents is retired by another player's action, target an agent in the opposing mission team.  Send the target to headquarters." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="3" />
+		</card>
+		<card id="01a53632-b8dc-4a0a-ba08-d600416c32bb" name="Carnival of Carnage">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Fight - Public - Charisma +4" />
+			<property name="Rules" value="Attacker: After mission teams assign to Carnival of Carnage, put 7 Reveller counters on Carnival of Carnage.  Carnival of Carnage has +1 cover for each Reveller counter on it.&#xD;&#xA;Defender: After each time an agent successfully performs an action, remove a Reveller counter from Carnival of Carnage." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="0" />
+		</card>
+		<card id="ea550f99-e05b-4169-a773-fe5e610d33d1" name="Archway to Death">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Fight - Private - Combat +5" />
+			<property name="Rules" value="Attacker: After you assign your mission team, put a Point token on an agent in your team. If that agent is retired during the mission, each opposing player gains 1 Victory Point and you must place a Point token on another agent in your team.&#xD;&#xA;Defender: After you assign your mission team, put a Point token on an agent in your team. If that agent is retired during the mission, each opposing player gains 1 Victory Point and you must place a Point token on another agent in your team." />
+			<property name="Victory Points" value="5" />
+			<property name="Cover Level" value="5" />
+		</card>
+		<card id="039b84fb-d2cb-44b6-be01-d69512ffa28c" name="Threading the Needle">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Chase - Public - Transport +4" />
+			<property name="Rules" value="Attacker: Your agents may perform: 'Mission Transport 5: Wound an opposing agent.'&#xD;&#xA;Defender: Your agents may perform: 'Mission Transport 5: Wound an opposing agent.'" />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="0" />
+		</card>
+		<card id="c0fd3889-05e8-45db-928c-bcf5b242fed9" name="Deep Sea Danger">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Intrigue - Private - Craft +4" />
+			<property name="Rules" value="Attacker: After the Attacker and Defender pass consecutively, retire the highest expense opposing agent.&#xD;&#xA;Defender: After the Attacker and Defender pass consecutively, retire the highest expense opposing agent." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="4" />
+		</card>
+		<card id="6da6f34c-f19c-474b-9d95-4f90252a1623" name="Merchandise Mart Frenzy">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Intrigue - Public - Charisma +4" />
+			<property name="Rules" value="Attacker: Exposed agents have -2 to all skills.&#xD;&#xA;Defender: Exposed agents have -2 to all skills." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="3" />
+		</card>
+		<card id="6f656c7c-5edb-49f9-87ba-e50e014ab880" name="Death in the Desert">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Fight - Private - Transport +4" />
+			<property name="Rules" value="Attacker: Wounded agents do not contribute their transport to your skill total for the mission.&#xD;&#xA;Defender: Wounded agents do not contribute their transport to your skill total for the mission.Wounded agents do not contribute their transport to your skill total for the mission." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="5" />
+		</card>
+		<card id="f3a53660-a685-456b-95f5-4e7a4675bae7" name="Mission San Antonio del Valero">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Fight - Public - Combat +5" />
+			<property name="Rules" value="Attacker: Your agents may perform: Mission Transport: If your mission team contains less than 5 agents, move this agent into your mission team.&#xD;&#xA;Defender: Your agents have +3 cover. Your agents may not be sent to headquarters." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="3" />
+		</card>
+		<card id="04215404-b385-46eb-a711-07b2eee98a12" name="Morituri te Salutant">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Fight - Public - Charisma +3" />
+			<property name="Rules" value="Attacker: After you wound target opposing agent, discard the top card of your Agency Deck. If the bravado of the discard is even, wound the target again.&#xD;&#xA;Defender: After you wound target opposing agent, discard the top card of your Agency Deck. If the bravado of the discard is even, wound the target again." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="0" />
+		</card>
+		<card id="8efdc097-d8bc-4506-b771-dbff2671d8b6" name="M.I.T. Lab Assault">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Fight - Public - Transport +5" />
+			<property name="Rules" value="Attacker: Gadget gear cards provide double skill bonuses.&#xD;&#xA;Defender: Gadget gear cards provide double skill bonuses." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="4" />
+		</card>
+		<card id="af8cc5e9-d0cc-4779-af91-7db63a0931bd" name="Outback and Out of Luck">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Chase - Public - Transport +5" />
+			<property name="Rules" value="Attacker: Your agents may not discard for bravado during this mission.&#xD;&#xA;Defender: Your agents may not discard for bravado during this mission." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="2" />
+		</card>
+		<card id="945b26d6-5cb3-4d65-bb13-c509f2306a89" name="Hub of Secrets">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Intrigue - Private - Craft +5" />
+			<property name="Rules" value="Attacker: If you win this mission, the Defender must play with his hand face up until the end of the next turn.&#xD;&#xA;Defender: If you win this mission, the Attacker must play with his hand face up until the end of the next turn." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="2" />
+		</card>
+		<card id="2f8939e1-4d89-42ed-a7ca-c48a0ad2ca3e" name="Southern Belle Down">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Chase - Public - Transport +5" />
+			<property name="Rules" value="Attacker: If you win this mission, permanently attach this mission to an agent. While attached, this card is a gear card with the Vehicle and Aircraft traits and gives this agent +2 transport and +2 combat.&#xD;&#xA;Defender: If you win this mission, permanently attach this mission to an agent. While attached, this card is a gear card with the Vehicle and Aircraft traits and gives this agent +2 transport and +2 combat." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="2" />
+		</card>
+		<card id="849f5669-4dab-4140-95d6-654fea21e1ab" name="Two Minutes to Midnight">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Chase - Private - Charisma +4" />
+			<property name="Rules" value="Attacker: If you ever have only one agent on your mission team, that agent is retired.&#xD;&#xA;Defender: If you ever have only one agent on your mission team, that agent is retired." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="3" />
+		</card>
+		<card id="c61d4481-00cb-4bca-969c-df4ea9e78fc4" name="Twin City Time Bomb">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Intrigue - Public - Combat +4" />
+			<property name="Rules" value="Attacker: Place three Bomb tokens on this mission. All agents may perform: 'Mission Craft 7: Remove a Bomb token from this mission.'&#xD;&#xA;Defender: After all players pass consecutively at this mission, wound all agents at this mission once for each Bomb token on this mission." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="5" />
+		</card>
+		<card id="93689e07-382b-434f-9611-7998ccda9aeb" name="Triple Play At Wrigley">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Fight - Public - Craft +5" />
+			<property name="Rules" value="Attacker: Your agents have +1 to all skills if you are wearing a sports jersey or cap (+2 for both).&#xD;&#xA;Defender: Your agents have +1 to all skills if you are wearing a sports jersey or cap (+2 for both)." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="5" />
+		</card>
+		<card id="74a16d38-ed10-499c-9e35-fb9c55ccf619" name="Hotel Coronado Surveillance">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Intrigue - Private - Craft +3" />
+			<property name="Rules" value="Attacker: You may only assign inactive agents to this mission.&#xD;&#xA;Defender: You may only assign inactive agents to this mission." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="2" />
+		</card>
+		<card id="6a2507f0-e351-48d6-a842-a65fbd935fd4" name="Bikinis and Biceps">
+			<property name="Type" value="Mission" />
+			<property name="Expense Rating" value="" />
+			<property name="Charisma" value="" />
+			<property name="Combat" value="" />
+			<property name="Transport" value="" />
+			<property name="Craft" value="" />
+			<property name="Level" value="" />
+			<property name="Bravado" value="" />
+			<property name="Faction" value="" />
+			<property name="Traits" value="Intrigue - Public - Combat +4" />
+			<property name="Rules" value="Attacker: Your female agents have +2 Charisma.&#xD;&#xA;Defender: Your male agents have +2 Combat." />
+			<property name="Victory Points" value="7" />
+			<property name="Cover Level" value="3" />
+		</card>
 	</cards>
 </set>
